@@ -156,7 +156,7 @@
 									Spectral Imaging,
 									CASSI)是间接型快照式成像光谱技术的代表，通过压缩感知技术融入到光谱成像过程和图谱重构过程中，其基本构造如图1所示。
 								</p>
-								<figure class="mockup-grid__item mockup-width" align="center">
+								<figure class="mt-2" align="center">
 									<div class="mockup-img mockup-img--large">
 										<img style="width: 60%;height: 60%;" src="assets/images/CASSI/1.png" />
 									</div>
@@ -165,7 +165,7 @@
 								<p class="mockup-heading__subline" style="font-size: 20px;">
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CASSI基于压缩成像理论采用如图2所示的二值化离散随机编码模板在前置镜的像面上对所成图像进行随机二值化编码，然后通过色散元件(Amici色散棱镜或光栅)对编码图像进行色散，由探测器阵列采集空间与光谱混叠的复合图像，最后通过图像重构算法将采集的复合图像重构成三维图谱数据立方体。
 								</p>
-								<figure class="mockup-grid__item mockup-width" align="center">
+								<figure class="mt-2" align="center">
 									<div class="mockup-img mockup-img--large">
 										<img style="width: 20%;height: 20%;" src="assets/images/CASSI/2.png" />
 									</div>
@@ -174,7 +174,7 @@
 								<p class="mockup-heading__subline" style="font-size: 20px;">
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如图3所示，CASSI空间维编码后进行色散会产生图谱混叠，探测器面获得的光场强度分布，都是空间稀疏采样沿光谱维展开和偏移后在一点混叠。
 								</p>
-								<figure class="mockup-grid__item mockup-width" align="center">
+								<figure class="mt-2" align="center">
 									<div class="mockup-img mockup-img--large">
 										<img style="width: 60%;height: 60%;" src="assets/images/CASSI/3.png" />
 									</div>
@@ -187,25 +187,22 @@
 								<p class="mockup-heading__subline" style="font-size: 20px;">
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;采用一个与变换基`\Psi`不相关的观测基`\Phi_{M \times N}`(`M`&lt;&lt;`N`)对系数向量进行线性变换，并得到观测集合`g_{M\times1}`，那么就可以利用优化求解方法从观测集合中高概率地重构原始信号。图4所示为信号重构的理论框架：
 								</p>
-								<figure class="mockup-grid__item mockup-width" align="center">
+								<figure class="mt-2" align="center">
 									<div class="mockup-img mockup-img--large">
 										<img style="width: 60%;height: 60%;" src="assets/images/CASSI/4.png" />
 									</div>
 									<span><strong>图4 压缩感知理论框架</strong></span>
 								</figure>
 								<p class="mockup-heading__subline" style="font-size: 20px;">
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;常见的求解方法与梯度投影、迭代收缩和深度学习卷积神经网络法。传统的迭代压缩法在收敛上不尽如人意，为了提高模糊图像的复原速度，加快收敛速度，本项目在迭代压缩算法的基础上经过改进得到了两步迭代压。TwIST算法的核心是利用前两个估计值更新当前值，也就是所谓“两步”迭代压缩。
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;常见的求解方法与梯度投影、迭代收缩和深度学习卷积神经网络法。如图5(a)所示的黑白棋盘格、标准色卡的目标场景，仿真的谱信息的编码混叠数据如图5(b)所示。在两步迭代压缩算法(TwIST)中增加全变分正则约束项，并在迭代过程对更新项进行去噪处理，重构出图6所示的24谱段的光谱图像数据，不同光谱切片中方块边缘清晰可见，较好地保留了空间细节信息；色卡在图6的光谱切片中清晰可见，色卡上不同块的亮暗表示当前谱段下不同颜色灰度值的强度，验证了算法对CASSI数据重构的效果。
 								</p>
-								<p class="mockup-heading__subline" style="font-size: 20px;">
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如图5(a)所示的黑白棋盘格、标准色卡的目标场景，仿真的谱信息的编码混叠数据如图5(b)所示。在两步迭代压缩算法(TwIST)中增加全变分正则约束项，并在迭代过程对更新项进行去噪处理，重构出图6所示的24谱段的光谱图像数据，不同光谱切片中方块边缘清晰可见，较好地保留了空间细节信息；色卡在图6的光谱切片中清晰可见，色卡上不同块的亮暗表示当前谱段下不同颜色灰度值的强度，验证了算法对CASSI数据重构的效果。
-								</p>
-								<figure class="mockup-grid__item mockup-width" align="center">
+								<figure class="mt-2" align="center">
 									<div class="mockup-img mockup-img--large">
 										<img style="width: 50%;height: 50%;" src="assets/images/CASSI/5.png" />
 									</div>
 									<span><strong>图5 棋盘格目标CASSI系统仿真成像数据</strong></span>
 								</figure>
-								<figure class="mockup-grid__item mockup-width" align="center">
+								<figure class="mt-2" align="center">
 									<div class="mockup-img mockup-img--large">
 										<img style="width: 50%;height: 50%;" src="assets/images/CASSI/6.png" />
 									</div>
