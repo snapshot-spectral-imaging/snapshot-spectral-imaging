@@ -104,7 +104,7 @@
 								your projects!
 							</p>
 
-							<img src="assets/images/banner.png" alt="" class="img-fluid mt-5">
+							<img src="assets/images/LF.png" alt="" class="img-fluid mt-5">
 
 							<div class="widget-social-icons mt-sm-5 mt-4">
 								<ul class="icon-rounded address">
@@ -153,51 +153,57 @@
 									style="font-size: 30px;margin-bottom: 10px;">Abstract</h1> -->
 								<span class="mt-4 mb-4 text"
 									style="font-size: 40px;text-align: center;">基于微反射镜阵列的像面分割投影成像光谱系统简介</span>
-								<p class="mockup-heading__subline" style="font-size: 20px;">
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IMSS作为典型的分像面型快照光谱成像系统，具有光通量高、结构紧凑、数据处理方法简单等优点，原理示意图如图1所示，置于前置成像镜像面处的微反射镜阵列由具有二维空间指向角的反射镜条带组合而成，微反射镜阵列一方面实现了目标像面的分割和反射，另一方面实现了孔径光阑的投影组合。微反射镜阵列与准直镜、色散棱镜、成像镜以及探测器构成了多通道成像光谱仪，实现了目标三维图谱数据向二维探测数据的投影映射。
-								</p>
-								<figure class="mt-2" align="center">
-									<div class="mockup-img mockup-img--large">
-										<img style="width: 60%;height: 60%;" src="assets/images/IMSS/1.png" />
+
+								<div align="center">
+									<div class="col-lg-9">
+										<p class="mockup-heading__subline" style="font-size: 20px;">
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IMSS作为典型的分像面型快照光谱成像系统，具有光通量高、结构紧凑、数据处理方法简单等优点，原理示意图如图1所示，置于前置成像镜像面处的微反射镜阵列由具有二维空间指向角的反射镜条带组合而成，微反射镜阵列一方面实现了目标像面的分割和反射，另一方面实现了孔径光阑的投影组合。微反射镜阵列与准直镜、色散棱镜、成像镜以及探测器构成了多通道成像光谱仪，实现了目标三维图谱数据向二维探测数据的投影映射。
+										</p>
+										<figure class="mt-2" align="center">
+											<div class="mockup-img mockup-img--large">
+												<img style="width: 80%;height: 80%;" src="assets/images/IMSS/1.png" />
+											</div>
+											<span><strong>图1 IMSS系统原理示意图</strong></span>
+										</figure>
+										<p class="mockup-heading__subline" style="font-size: 20px;">
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在理论研究方面，本项目分别建立了基于标量衍射理论的光波场辐射传输模型和基于矢量光线追迹的几何成像模型，并开展了仿真和实验验证。在应用研究方面，本项目对IMSS系统关键元件微反射镜阵列进行了设计优化，降低了子孔径间的光通量串扰，提升了成像性能。提出了一种基于Zemax混合非序列模式的IMSS系统光学仿真模型，可以准确评价系统设计结果。本项目还提出了一种高精度、高效率的IMSS单谱段几何定标方法，对于系统图谱数据重构具有实际意义。
+										</p>
+										<p class="mockup-heading__subline" style="font-size: 20px;">
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图2所示为本项目搭建的IMSS成像实验装置。本项目采用卤钨灯照明彩色胶片作为成像目标（图3(a)所示），探测器成像结果如图3(b)所示，图3(c)~(e)为重构的目标数据立方体和目标点的重构谱线。
+										</p>
+										<figure class="mt-2" align="center">
+											<div class="mockup-img mockup-img--large">
+												<img style="width: 65%;height: 65%;" src="assets/images/IMSS/2.jpg" />
+											</div>
+											<span><strong>图2 IMSS光谱成像实验装置照片</strong></span>
+										</figure>
+										<figure class="mt-2" align="center">
+											<div class="mockup-img mockup-img--large">
+												<img style="width: 80%;height: 80%;" src="assets/images/IMSS/3.png" />
+											</div>
+											<span><strong>图3 IMSS系统成像实验结果</strong></span>
+										</figure>
+										<p class="mockup-heading__subline" style="font-size: 20px;">
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;针对重构的单谱段图像存在的强度伪影和空间分辨率低的问题，本项目提出了一种基于卷积神经网络的伪影校正及超分辨联合算法，其网络框架如图4所示。
+										</p>
+										<figure class="mt-2" align="center">
+											<div class="mockup-img mockup-img--large">
+												<img style="width: 90%;height: 90%;" src="assets/images/IMSS/4.png" />
+											</div>
+											<span><strong>图4 伪影校正及超分辨联合网络模型</strong></span>
+										</figure>
+										<p class="mockup-heading__subline" style="font-size: 20px;">
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;利用仿真图像对网络进行预训练，结合实验图像进行迁移学习，训练出了适用于实验图像伪影特征的网络模型，将重构图像的空间分辨率提升了2倍，效果如图5所示。
+										</p>
+										<figure class="mt-2" align="center">
+											<div class="mockup-img mockup-img--large">
+												<img style="width: 95%;height: 95%;" src="assets/images/IMSS/5.png" />
+											</div>
+											<span><strong>图5 不同算法针对实验重构图像二倍超分辨结果图</strong></span>
+										</figure>
+
 									</div>
-									<span><strong>图1 IMSS系统原理示意图</strong></span>
-								</figure>
-								<p class="mockup-heading__subline" style="font-size: 20px;">
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在理论研究方面，本项目分别建立了基于标量衍射理论的光波场辐射传输模型和基于矢量光线追迹的几何成像模型，并开展了仿真和实验验证。在应用研究方面，本项目对IMSS系统关键元件微反射镜阵列进行了设计优化，降低了子孔径间的光通量串扰，提升了成像性能。提出了一种基于Zemax混合非序列模式的IMSS系统光学仿真模型，可以准确评价系统设计结果。本项目还提出了一种高精度、高效率的IMSS单谱段几何定标方法，对于系统图谱数据重构具有实际意义。
-								</p>
-								<p class="mockup-heading__subline" style="font-size: 20px;">
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图2所示为本项目搭建的IMSS成像实验装置。本项目采用卤钨灯照明彩色胶片作为成像目标（图3(a)所示），探测器成像结果如图3(b)所示，图3(c)~(e)为重构的目标数据立方体和目标点的重构谱线。
-								</p>
-								<figure class="mt-2" align="center">
-									<div class="mockup-img mockup-img--large">
-										<img style="width: 55%;height: 55%;" src="assets/images/IMSS/2.jpg" />
-									</div>
-									<span><strong>图2 IMSS光谱成像实验装置照片</strong></span>
-								</figure>
-								<figure class="mt-2" align="center">
-									<div class="mockup-img mockup-img--large">
-										<img style="width: 60%;height: 60%;" src="assets/images/IMSS/3.png" />
-									</div>
-									<span><strong>图3 IMSS系统成像实验结果</strong></span>
-								</figure>
-								<p class="mockup-heading__subline" style="font-size: 20px;">
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;针对重构的单谱段图像存在的强度伪影和空间分辨率低的问题，本项目提出了一种基于卷积神经网络的伪影校正及超分辨联合算法，其网络框架如图4所示。
-								</p>
-								<figure class="mt-2" align="center">
-									<div class="mockup-img mockup-img--large">
-										<img style="width: 70%;height: 70%;" src="assets/images/IMSS/4.png" />
-									</div>
-									<span><strong>图4 伪影校正及超分辨联合网络模型</strong></span>
-								</figure>
-								<p class="mockup-heading__subline" style="font-size: 20px;">
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;利用仿真图像对网络进行预训练，结合实验图像进行迁移学习，训练出了适用于实验图像伪影特征的网络模型，将重构图像的空间分辨率提升了2倍，效果如图5所示。
-								</p>
-								<figure class="mt-2" align="center">
-									<div class="mockup-img mockup-img--large">
-										<img style="width: 75%;height: 75%;" src="assets/images/IMSS/5.png" />
-									</div>
-									<span><strong>图5 不同算法针对实验重构图像二倍超分辨结果图</strong></span>
-								</figure>
+								</div>
 								<!-- <div align="center">
 									<video width="40%" controls="controls" autoplay="autoplay" loop="loop">
 										<source src="assets/vedio/LF/1.mp4" />
@@ -212,7 +218,7 @@
 				</div><!-- /mockup-browser -->
 			</div><!-- /content -->
 		</div><!-- /container -->
-<!-- 		<div class="copyright py-sm-5 py-4 text-center">
+		<!-- 		<div class="copyright py-sm-5 py-4 text-center">
 			<div class="container">
 				<p class="copy-footer-29">© 2020 I, Portfolio. All rights reserved</p>
 			</div>
