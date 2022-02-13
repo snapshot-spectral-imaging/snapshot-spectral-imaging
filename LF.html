@@ -13,7 +13,8 @@
 
 		<!-- Template CSS -->
 		<link rel="stylesheet" href="assets/css/style-starter.css">
-		<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full"></script>
+		<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full">
+		</script>
 	</head>
 	<body>
 		<header id="site-header" class="fixed-top">
@@ -84,7 +85,8 @@
 
 
 		<!-- Domain Modal -->
-		<div class="modal right fade" id="DomainModal" tabindex="-1" role="dialog" aria-labelledby="DomainModalLabel2">
+		<!-- <div class="modal right fade" id="DomainModal" tabindex="-1" role="dialog" aria-labelledby="DomainModalLabel2"> -->
+		<div class="modal right fade" tabindex="-1" role="dialog" aria-labelledby="DomainModalLabel2">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 
@@ -181,6 +183,14 @@
 									</div>
 									<span><strong>图3 室外成像实验及目标光谱重构</strong></span>
 								</figure>
+								<!-- <div align="center">
+									<video width="40%" controls="controls" autoplay="autoplay" loop="loop">
+										<source src="assets/vedio/LF/1.mp4" />
+									</video>
+									<video width="40%" controls="controls" autoplay="autoplay" loop="loop">
+										<source src="assets/vedio/LF/2.mp4" />
+									</video>
+								</div> -->
 							</div>
 						</div><!-- /mockup-grid -->
 					</section>
@@ -202,7 +212,7 @@
 				scrollFunction()
 			};
 
-		 function scrollFunction() {
+			function scrollFunction() {
 				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
 					document.getElementById("movetop").style.display = "block";
 				} else {
@@ -280,7 +290,7 @@
 		<script>
 			$(document).ready(function() {
 				$('.owl-testimonial').owlCarousel({
-		 		loop: true,
+					loop: true,
 					margin: 0,
 					nav: true,
 					responsiveClass: true,
@@ -326,13 +336,13 @@
 				var newString = "";
 				thhis.text("|");
 				setTimeout(function() {
-		 		thhis.css("opacity", 1);
+					thhis.css("opacity", 1);
 					thhis.prev().removeAttr("style");
 					thhis.text("");
 					for (var i = 0; i < amntOfChars; i++) {
 						(function(i, char) {
 							setTimeout(function() {
-		 					newString += char;
+								newString += char;
 								thhis.text(newString);
 							}, i * typingSpeed);
 						})(i + 1, text[i]);
@@ -383,8 +393,8 @@
 				$(window).on("resize", function() {
 					if ($(window).width() > 991) {
 						$("header").removeClass("active");
-		 		}
-		 	});
+					}
+				});
 			});
 		</script>
 		<!-- //MENU-JS -->
