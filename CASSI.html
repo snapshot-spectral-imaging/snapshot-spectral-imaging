@@ -13,9 +13,7 @@
 
 		<!-- Template CSS -->
 		<link rel="stylesheet" href="assets/css/style-starter.css">
-		<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full">
-		</script>
-	</head>
+		<link rel="dns-prefetch" href="//cdn.mathjax.org" />
 	<body>
 		<header id="site-header" class="fixed-top">
 			<div class="container">
@@ -252,13 +250,33 @@
 			}
 		</script>
 		<!-- /move top -->
-
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({
+				showProcessingMessages: false,
+				messageStyle: "none",
+				extensions: ["tex2jax.js"],
+				jax: ["input/TeX", "output/HTML-CSS"],
+				tex2jax: {
+					inlineMath:  [ ["$", "$"] ],
+					displayMath: [ ["$$","$$"] ],
+					skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code','a'],
+					ignoreClass:"comment-content"
+				},
+				"HTML-CSS": {
+					availableFonts: ["STIX","TeX"],
+					showMathMenu: false
+				}
+			});
+			MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+		</script>
+		<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full">
+		</script>
+		<!-- /mathjax -->
 		<!-- jQuery and Bootstrap JS -->
 		<script src="assets/js/jquery-3.3.1.min.js"></script>
 
 		<script src="assets/js/theme-change.js"></script><!-- theme switch js (light and dark)-->
-
-
+		
 		<!-- owlcarousel -->
 		<script src="assets/js/owl.carousel.js"></script>
 
@@ -426,7 +444,6 @@
 
 		<!-- bootstrap -->
 		<script src="assets/js/bootstrap.min.js"></script>
-
 	</body>
 
 </html>
